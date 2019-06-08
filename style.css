@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Amethysta&display=swap');
+
+body {
+    font-family: 'Amethysta', sans-serif;
+    background: url("images/phone2.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #333;
+}
+.abu-bank {
+    text-align: center;
+    margin-top: 130px;
+}
+.voice-container {
+    text-align: center;
+}
+.voice {
+    width: 120px;
+    margin-top: 0px;
+}
+.page2-container {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.page2-container a {
+    color: rgba(23, 163, 159, 0.87);
+}
+.page2-container h3 {
+    margin-top: 30px;
+}
+.page2-container .voice {
+    margin-top: 25px;
+}
+.page6-container {
+    text-align: center;
+}
+.page6-container .divs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    margin: 0 5px;
+}
+.page6-container .divs div {
+    width: 140px;
+    height: 140px;
+    background: #cacaca;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+}
+.page6-container img {
+    width: 20%;
+}
+.voice-6 {
+    margin-top: 20px;
+}
+.voice-2-1 {
+    margin-top: 0px;
+    width: 50px;
+}
+.voice-2-2 {
+    margin-top: 0px;
+    width: 100px;
+}
+.page2-container button {
+    margin: 20px;
+}
+.page2-container input {
+    margin-bottom: 5px;
+}
+.orangee {
+    color: #e3973a !important;
+}
+.izquierda {
+    text-align: left;
+    margin-left: 40px;
+}
+.izquierda img {
+    text-align: right;
+}
+.margen1 {
+    margin-left: 90px;
+}
+.margen2 {
+    margin-left: 10px;
+}
+.margen3 {
+    margin-left: 70px;
+}
+.marginn {
+    margin-top: 10px !important;
+}
+.abueletes {
+    width: 250px;
+}
+.alertas {
+    width: 150px;
+    height: 50px;
+    margin-left: 80px;
+    background: #e5e5e5;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.page6-container button {
+    margin: 20px;
+}
+#saldo {
+    cursor: pointer;
+}
+.voice-7 {
+    width: 300px !important;
+}
+.margen4 {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.voice-8 {
+    width: 260px !important;
+}
+a {
+    text-decoration: none;
+}

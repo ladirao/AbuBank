@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABU BANK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="abu-bank">ABUBANK</h1>
+<div class="page6-container">
+    <h4>Empieza a usar tu nuevo banco</h4>
+    <p id="hacerAhora">¿Qué quieres hacer ahora?</p>
+    <div class="divs">
+        <div id="saldo">Consultar Saldo</div>
+        <div>Hacer Transferencias</div>
+        <div>Echar la mañana</div>
+        <div>Añadir otros servicios</div>
+    </div>
+
+    <div class="voice-container">
+        <img src="images/voice3.png" alt="voice" class="voice voice-6">
+    </div>
+    <button id="atras" onclick="window.location.href='page5.html'">Atrás</button>
+    <button id="adelante" onclick="window.location.href='page7.html'">Adelante</button>
+
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script>
+        $("#saldo").click(function(){
+            $.ajax({
+                url : 'https://api-glbk.liberbank.es/tpps/sb/psd2/v1.0/accounts/LBK123/balances',
+                type: 'GET',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('accept','application/json');
+                    xhr.setRequestHeader('Authorization', 'Bearer AAIkZmMxN2EzMTktZmExZC00MGNmLTkzMDgtNGQ5YjA0OGJkY2Nkv15jgZbFjM0QS_K4GNvXAGYmPtG19-43pBx9Fqv-QFyUG4VqbIkGAFKVnywIDuENjf4EIxODRDg9HT7kKv3LLLw0BTN4p95oe8dHWhblNJ5X9ZnvuFi992H_ECYmrBpqk-9NB3j2Mg12znPzCwpMuHwA9MStiKioMex-esDUTU4');
+                    xhr.setRequestHeader('X-Request-Id','5d96f767-f262-4344-937b-4296aa820eae')
+                },
+                // El resto del código
+                success : function(json) {
+                    $(".divs div").hide();
+                    $("#hacerAhora").hide();
+
+                    $(".divs").css("display","block");
+                    $(".divs").html(
+                        "<div style='margin-left:90px;background-color:white;height: 30px;padding-bottom: 40px;border: none'>Su saldo: </div>" +
+                        "<div style='margin-left:90px;background-color:white;height: 30px;padding-bottom: 40px;border: none'>Nº Cuenta: " + json.account.iban + "</div>" +
+                        "<div style='margin-left:90px;background-color:white;height: 30px;padding-bottom: 40px;border: none'>Saldo: " + json.balances.closingBooked.amount.amount + " " + json.balances.closingBooked.amount.currency + "</div>"
+                    );
+                    $("#adelante").hide();
+                    $("#atras").attr("onclick","window.location.href='page6.html'")
+
+                },
+                error: function (json) {
+                    $("#amount").html("367 EUR");
+                }
+            });
+        });
+
+    </script>
+
+</div>
+</body>
+</html>
